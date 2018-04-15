@@ -1,0 +1,17 @@
+
+  <div class="view overlay hm-white-slight mb-2 waves-light" mdbRippleRadius>
+    <img class="img-fluid mx-auto d-block" alt=""
+           [src]="pet.displayurl"
+           aria-controls="active"
+           style="height:250px;width:250px;">
+  </div>
+    <h3 class="mb-3">{{ pet.petName }}</h3>
+    <h4>{{ pet.petType }} - {{ pet.petBreed }}</h4>
+    <p>{{ pet.petDescription }}</p>
+    <button type="button" class="btn btn-secondary waves-light" mdbRippleRadius (click)="favorite(pet.petName)">Favorite ({{ favorited }})</button>
+    <i
+      (click)="favorite(pet.petName)"
+      class="fa fa-heart-o fa-3x"
+      style="color:red"
+      aria-hidden="true"
+    ></i>
