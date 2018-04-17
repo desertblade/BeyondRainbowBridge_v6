@@ -5,13 +5,14 @@
            aria-controls="active"
            style="height:250px;width:250px;">
   </div>
-    <h3 class="mb-3">{{ pet.petName }}</h3>
+    <h1 class="mb-3">{{ pet.petName }}</h1>
     <h4>{{ pet.petType }} - {{ pet.petBreed }}</h4>
     <p>{{ pet.petDescription }}</p>
-    <button type="button" class="btn btn-secondary waves-light" mdbRippleRadius (click)="favorite(pet.petName)">Favorite ({{ favorited }})</button>
+
+  <!-- Adding a Favorite Heart -- It will show a full heart if you favorite it -->
     <i
       (click)="favorite(pet.petName)"
-      class="fa fa-heart-o fa-3x"
+      class="fa {{favorited ? 'fa-heart' : 'fa-heart-o'}} fa-3x"
       style="color:red"
       aria-hidden="true"
     ></i>

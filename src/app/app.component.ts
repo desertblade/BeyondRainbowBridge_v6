@@ -15,7 +15,7 @@ export class AppComponent {
   totalFavorites:number = 0;
   mostRecentFavorite:string = '';
 
-  handleFavoreted(e):void{
+  handleFavorited(e):void{
     console.log('app-component gets favorites:' + e.name);
     if ( e.favored === true ) {
       this.totalFavorites += 1;

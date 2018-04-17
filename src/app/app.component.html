@@ -4,8 +4,10 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <p>Total Pets Favorited: {{ totalFavorites }}, Last Pet Favorited: {{ mostRecentFavorite }}</p>
+  <p>Total Pets Favored: {{ totalFavorites }}, Last Pet Favored: {{ mostRecentFavorite }}</p>
 </div>
+
+
 <div class="container">
   <div class="row">
     <app-pet
@@ -13,7 +15,7 @@
       class="col-lg-4 col-md-12 mb-r text-center"
       [pet]="petObject"
       [baseUrl]="imageUrl"
-      (favoriteEvent)="handleFavoreted($event)">
+      (favoriteEvent)="handleFavorited($event)">
     </app-pet>
   </div>
 </div>

@@ -7,6 +7,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 })
 export class PetComponent implements OnInit {
 
+  // Setting up some parameters
   @Input() pet;
   @Input() baseUrl;
   @Output() favoriteEvent = new EventEmitter<object>();
@@ -23,7 +24,5 @@ export class PetComponent implements OnInit {
   ngOnInit() {
     this.pet.displayurl = this.baseUrl + this.pet.petImageURL;
   }
-
-
 
 }
