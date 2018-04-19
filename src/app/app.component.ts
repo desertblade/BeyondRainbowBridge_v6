@@ -11,10 +11,10 @@ import { PetsService } from './pets.service';
 export class AppComponent {
   title = 'Beyond Rainbow Bridge';
 
-  // counter that will increment every time a favorite happens in a child component
+  // Intitalizing Counter Inputs
   totalFavorites:number = 0;
   mostRecentFavorite:string = '';
-
+  // counter that will increment every time a favorite happens in a child component
   handleFavorited(e):void{
     console.log('app-component gets favorites:' + e.name);
     if ( e.favored === true ) {
